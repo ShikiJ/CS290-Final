@@ -6,10 +6,10 @@ app.set('port',process.argv[2]);
 
 /**this part is for set up and fire mysql */
 const db = mysql.createConnection({
-    host:'localhost',
-    user:'root',
-    password:"",
-    database:'hw6'
+	host: 'classmysql.engr.oregonstate.edu',
+    user: 'cs290_liushiy',
+    password: '4198',
+    database: 'cs290_liushiy'
 });
 
 db.connect((err)=>{

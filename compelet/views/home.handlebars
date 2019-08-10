@@ -1,0 +1,57 @@
+
+
+<h1>Static Handlebars Version HW 6</h1>
+    <div class="form-wrapper" >
+        <h2>Hitting that button should add the row to the table if it was successfully added to the database. </h2>
+       <form action="/insert" method="POST" id="post-form">
+            <lable >name     </lable>
+            <br>
+            <input type="text" name="name" class="input">
+            <br>
+            <lable>reps     </lable>
+            <br>
+            <input type="text" name="reps" class="input">
+            <br>
+            <lable>weight       </lable>
+            <br>
+            <input type="text"name="weight" class="input">
+            <br>
+            <lable>date         </lable>
+            <br>
+            <input type="text" name="date" class="input">
+            <br>
+            <lable>unit         </lable>
+            <br>
+            <input type="text" name="unit" class="input">
+            <br>
+            <input type="text" name= "command" value= "0" hidden id="command" >
+            <input type="text" name="id" hidden id="id">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <div class="display-wrapper">
+        <h2>Each row should have two buttons</h2>
+        <h3>delete button should immediately remove the row from the table and from the database.</h3>
+        <h3>edit pre-populated with the existing data from and re-submit will update it</h3>
+        <h4>Some hideent var is needed to distinguise new add and edit</h4>
+       
+               <table>
+            <caption>Exercise Completed</caption>
+            <thead>
+                <tr>
+                    <th>Name    </th>
+                    <th>Reps    </th>
+                    <th>Weight  </th>
+                    <th>Date    </th>
+                    <th>Unit    </th>
+                    <th>Edit    </th>
+                    <th>Delete  </th>    
+                </tr>
+            </thead>
+            <tbody id="table-inject">
+                
+            </tbody>         
+        </table>
+    </div>
+<script src="/assets/script.js"></script>

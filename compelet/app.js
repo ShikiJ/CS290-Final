@@ -2,7 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 const bodyParse = require('body-parser');
 
-app.set('port',process.argv[2]);
+
 
 /**this part is for set up and fire mysql */
 const db = mysql.createConnection({
@@ -21,6 +21,9 @@ db.connect((err)=>{
 /*this part is using express's route*/
 const app = express();
 app.use('/assets',express.static('assets'));
+
+// this is for! work!  
+app.set('port',process.argv[2]);
 
 /*this part require express handlebars */
 const hbars = require('express-handlebars'); 

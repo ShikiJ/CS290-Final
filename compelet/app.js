@@ -2,6 +2,8 @@ const express = require('express');
 const mysql = require('mysql');
 const bodyParse = require('body-parser');
 
+app.set('port',process.argv[2]);
+
 /**this part is for set up and fire mysql */
 const db = mysql.createConnection({
     host:'localhost',
@@ -153,6 +155,6 @@ app.post('/insert', urlencodedparese ,(req,res)=>{
 });
 
 
-app.listen('3000',()=>{
-    console.log('express listen to 3000');
+app.listen(app.get('port'),()=>{
+    console.log('express listen to ' + app.get('port'));
 });

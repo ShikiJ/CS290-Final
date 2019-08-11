@@ -10,7 +10,7 @@ req.addEventListener('readystatechange',e=>{
   if(req.readyState === 4 && req.status === 200)
   {
     // console.log('script.js->req eventListen')
-    //  console.log("successfully fetched data: " + req.responseText);
+      console.log("successfully fetched data: " + req.responseText);
     var raw = req.responseText;
     //console.log(typeof(returnraw));
     var obj = JSON.parse(raw);
@@ -77,7 +77,7 @@ req.addEventListener('readystatechange',e=>{
   }
 });
 
-req.open('GET', 'flip1.engr.oregonstate.edu:4339/');
+req.open('GET', 'http://flip1.engr.oregonstate.edu:4339/');
 req.send();
 
 //--------------------------------------------------------------------------------------

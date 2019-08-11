@@ -25,6 +25,14 @@ app.use('/assets',express.static('assets'));
 // this is for! work!  
 app.set('port',process.argv[2]);
 
+//This is for CORS 
+app.use((req, res, next) => {
+	res.append('Access-Control-Allow-Origin', 'http://web.engr.oregonstate.edu');
+	res.append('Access-Control-Allow-Methods', 'GET,POST');
+	res.append('Access-Control-Allow-Headers', 'Content-Type');
+	next();
+});
+
 /*this part require express handlebars */
 const hbars = require('express-handlebars'); 
 app.engine('handlebars',hbars({defaultLayout:'main'}));

@@ -77,7 +77,7 @@ req.addEventListener('readystatechange',e=>{
   }
 });
 
-req.open('GET', 'http://127.0.0.1:3000/');
+req.open('GET', 'flip1.engr.oregonstate.edu:4339/');
 req.send();
 
 //--------------------------------------------------------------------------------------
